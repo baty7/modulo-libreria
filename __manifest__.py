@@ -12,7 +12,7 @@
     'depends': ['base'],
     'data': [
         #'security/groups.xml',
-        #'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/libros.xml',
         #'views/templates.xml',
         #'demo/demo.xml',
