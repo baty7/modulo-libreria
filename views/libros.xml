@@ -48,18 +48,14 @@
             <field name="name">Acción de ventana para el modelo libros</field>
             <field name="res_model">libros</field>
             <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
             </field>
         </record>
 
-        <menuitem id ="libreria_menu_root" name="Libreria" sequence="10"/>
+        <menuitem id ="libreria_menu_root" name="Libreria"/>
 
-        <menuitem
-            id="libreria_libros_submenu"
-            name="Libros"
-            action="libros_action_window"
-            parent="libreria_menu_root"
-            sequence="10"/>
+        <menuitem name="Libros" id="libros_menu" parent="libreria_menu_root" />
+
+        <menuitem id="libreria_libros_submenu" name="Ver libros" action="libros_action_window" parent="libros_menu"/>
 
     </data>
 </odoo>
