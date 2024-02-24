@@ -4,7 +4,7 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 import re
 
-class libros(models.Model):
+class Libros(models.Model):
     _name = 'libros'
     _description = 'Modelo de libros donde se almacena informacion sobre cada libro'
 
