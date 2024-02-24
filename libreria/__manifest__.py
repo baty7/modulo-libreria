@@ -8,23 +8,14 @@
     'author': "Juan José Bautista Gallego",
 
     'category': 'tools',
-    'version': '0.2',
-    # any module necessary for this one to work correctly
+    'version': '1.2',
     'depends': ['base'],
-
-    # always loaded
     'data': [
         #'security/groups.xml',
         #'security/ir.model.access.csv',
         'views/libros.xml',
         #'views/templates.xml',
         #'demo/demo.xml',
-    ],
-    
-    # only loaded in demonstration mode
-    'demo': [
-        #'demo/demo.xml',
-    ],
-    # Pendiente de añadir un report Qweb.
+    ]
     
 }
