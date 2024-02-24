@@ -21,7 +21,8 @@ class Libros(models.Model):
             ("fantasia","Fantasía"),
             ("romance","Romance"),
             ("ciencia_ficcion","Ciencia ficción")
-            ("misterio","Misterio")
+            ("misterio","Misterio"),
+            ("terror","Terror")
         ]
         return genre
     genre = fields.Selection(get_genre,string="Género")
