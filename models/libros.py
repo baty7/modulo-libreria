@@ -11,7 +11,7 @@ class Libros(models.Model):
     name = fields.Char(string='Nombre',help='NOmbre del libro',required=True)
     isbn = fields.Char(string="ISBN",required=True)
     author = fields.Char(string="Autor")
-    desctiption= fields.Text(string="Descripción")
+    description= fields.Text(string="Descripción")
     price=fields.Float(string="Precio")
     quantity = fields.Integer(string="Cantidad")
     
