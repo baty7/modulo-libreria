@@ -6,10 +6,10 @@
             <field name="model">libros</field>
             <field name="arch" type="xml">
                 <form string="Formulario de Libros">
+                 <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
                     <sheet>
-                    <header>
-                    <field name="state" widget="statusbar" options="{'clickable':'1'}"/>
-                    </header>
                         <group>
                             <group>
                                 <field name="name"/>
@@ -18,11 +18,11 @@
                                 <field name="price"/>
                                 <field name="quantity"/>
                                 <field name="genre"/>
+                                <field name="description"/>
                             </group>
                             <group>
 
                             </group>
-                            <field name="description"/>
                         </group>
                     </sheet>
                 </form>
@@ -40,6 +40,7 @@
                     <field name="author"/>
                     <field name="price"/>
                     <field name="quantity"/>
+                    <field name="state" decoration-success="state == 'disponible'" decoration-info="state == 'prestado'" decoration-primary="state == 'vendido'" decoration-warning="state == 'no_stock'" widget="badge" optional="show" on_change="1" />
                 </tree>
             </field>
         </record>

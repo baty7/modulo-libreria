@@ -8,6 +8,10 @@ class Libros(models.Model):
     _name = 'libros'
     _description = 'Modelo de libros donde se almacena informacion sobre cada libro'
 
+    _sql_constraints = [
+        ('unique_isbn', 'UNIQUE(isbn)', 'El ISBN debe ser único. Ya existe un libro con este ISBN.')
+    ]
+
     name = fields.Char(string='Nombre',help='Nombre del libro',required=True)
     isbn = fields.Char(string="ISBN",required=True)
     author = fields.Char(string="Autor")
