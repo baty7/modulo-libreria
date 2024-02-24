@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+<data>
+
+    <record id="libreria_libros_form" model="ir.ui.view">
+        <field name="name">libreria_libros_form</field>
+        <field name="model">libros</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Libros">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="isbn" />
+                            <field name="author" />
+                            <field name="price" />
+                            <field name="quantity" />
+                        </group>
+                        <group>
+                        </group>
+                        <field name="desctiption" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="libreria_libros_tree" model="ir.ui.view">
+        <field name="name">libreria_libros_tree</field>
+        <field name="model">libros</field>
+        <field name="arch" type="xml">
+            <tree string="Lista de libros">
+                <field name="name" />
+                <field name="isbn" />
+                <field name="author" />
+                <field name="price" />
+                <field name="quantity" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="libros_action_window" model="ir.actions.act_window">
+        <field name="name">Acción de ventana para el modelo libros</field>
+        <field name="res_model">libros</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+        </field>
+    </record>
+
+    <menuitem id ="libreria_menu_root" name="Libreria" sequence="10"/>
+    <!-- parent="base.edit_menu_access" -->
+ 
+    <menuitem
+        id="libreria_libros_submenu"
+        name="Libros"
+        action="libros_action_window"
+        parent="libreria_menu_root"
+        sequence="10"/>
+
+</data>
+</odoo>

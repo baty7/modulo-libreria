@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="discografica_categoria_modulo" model="ir.module.category">
+        <field name="name">Discográfica</field>
+        <field name="description">Ayuda a gestionar la discográfica</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <record id="discografica_users" model="res.groups">
+        <field name="name">Usuarios para consulta</field>
+        <field name="category_id" ref="discografica_categoria_modulo"/>
+        <field name="comment">Usuarios básicos de la discográfica</field>
+        <field name="users" eval="[(4, ref('base.group_user'))]" />
+    </record>
+
+    <record id="discografica_admin" model="res.groups">
+        <field name="name">Usuarios administradores</field>
+        <field name="category_id" ref="discografica_categoria_modulo"/>
+        <field name="comment">Usuarios administradores de la discográfica</field>  
+        <!-- Añadir los usuarios del grupo anterior --> 
+        <field name="implied_ids" eval="[(4, ref('discografica_users'))]" />
+
+        <!-- Añadir usuarios -->      
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>    
+
+</odoo>

@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+    <!-- REGISTROS DE GÉNEROS -->
+
+          <record id="genre0" model="discografica.genre">
+            <field name="name">Rock</field>
+          </record>
+          <record id="genre1" model="discografica.genre">
+            <field name="name">Hard-Rock</field>
+          </record>
+          <record id="genre2" model="discografica.genre">
+            <field name="name">Metal</field>
+          </record>
+          <record id="genre3" model="discografica.genre">
+            <field name="name">Pop</field>
+          </record>
+          <record id="genre4" model="discografica.genre">
+            <field name="name">Indie</field>
+          </record>                              
+          <record id="genre5" model="discografica.genre">
+            <field name="name">Soul</field>
+          </record>   
+          <record id="genre6" model="discografica.genre">
+            <field name="name">Jazz</field>
+          </record>   
+          <record id="genre7" model="discografica.genre">
+            <field name="name">Hip hop / Rap</field>
+          </record>   
+          <record id="genre8" model="discografica.genre">
+            <field name="name">Salsa</field>
+          </record>                       
+          <record id="genre9" model="discografica.genre">
+            <field name="name">Melódico</field>
+          </record>                 
+
+<!-- REGISTROS DE ARTISTAS -->
+          <record id="artist0" model="discografica.artist">
+            <field name="name">Kiss</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre0'),ref('genre1')])]" />            
+          </record>                 
+          <record id="artist1" model="discografica.artist">
+            <field name="name">Bruno Mars</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre3')])]" />            
+          </record>   
+          <record id="artist2" model="discografica.artist">
+            <field name="name">Iron Maiden</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre2')])]" />            
+          </record>   
+          <record id="artist3" model="discografica.artist">
+            <field name="name">Coldplay</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre3')])]" />            
+          </record>   
+          <record id="artist4" model="discografica.artist">
+            <field name="name">Charlie Parker</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre6')])]" />            
+          </record>   
+          <record id="artist5" model="discografica.artist">
+            <field name="name">Los Zigarros</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre0')])]" />            
+          </record>   
+          <record id="artist6" model="discografica.artist">
+            <field name="name">Julito Iglesias</field>
+            <field name="genre_ids" eval="[(6,0, [ref('genre9')])]" />            
+          </record>                                                      
+
+<!-- REGISTROS DE DISCOS -->
+ 
+          <record id="disco0" model="discografica.disc">
+            <field name="name">Creatures of the Night</field>
+            <field name="enrollment_date" eval="(datetime.now()).strftime('%Y-%m-%d')" />            
+            <field name="artist_id" ref="artist0" />            
+            <field name="genre_id" ref="genre1" />            
+            <field name="year">1982</field>
+            <field name="cover" file="discografica/static/imgs/kiss0.jpg" type="base64"></field>
+            <field name="qty">5</field>
+            <field name="price">12.0</field>
+            <field name="format">1</field>
+            <field name="available">True</field>
+          </record>  
+
+          <record id="disco1" model="discografica.disc">
+            <field name="name">Viva la Vida or Death and All His Friends</field>
+            <field name="enrollment_date" eval="(datetime.now()).strftime('%Y-%m-%d')" />            
+            <field name="artist_id" ref="artist3" /> <!-- Especificar campos many2one -->           
+            <field name="genre_id" ref="genre3" />            
+            <field name="year">2008</field>
+            <field name="cover" file="discografica/static/imgs/coldplay0.jpg" type="base64"></field> <!-- Especificar binary-->
+            <field name="qty">8</field>
+            <field name="price">10.99</field>
+            <field name="format">3</field> <!-- Especificar datos de un selection, con id-->
+            <field name="available">True</field>
+          </record>  
+               
+    </data>
+</odoo>

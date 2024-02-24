@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+discografica_disc_acl,discografica_disc_default,model_discografica_disc,discografica_users,1,0,0,0
+discografica_disc_admin_acl,discografica_disc_admin_default,model_discografica_disc,discografica_admin,1,1,1,1
+discografica_artist_acl,discografica_artist_default,model_discografica_artist,discografica_users,1,0,0,0
+discografica_artist_admin_acl,discografica_artist_admin_default,model_discografica_artist,discografica_admin,1,1,1,1
+discografica_genre_acl,discografica_genre_default,model_discografica_genre,discografica_users,1,0,0,0
+discografica_genre_admin_acl,discografica_genre_admin_default,model_discografica_genre,discografica_admin,1,1,1,1
