@@ -7,7 +7,7 @@ import re
 class Libros(models.Model):
     _name = 'libros'
     _description = 'Modelo de libros donde se almacena informacion sobre cada libro'
-    _inherit = ['mail_thread']
+    _inherit = ['mail.thread']
 
     _sql_constraints = [
         ('unique_isbn', 'UNIQUE(isbn)', 'El ISBN debe ser único. Ya existe un libro con este ISBN.')
