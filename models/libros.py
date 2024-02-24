@@ -13,15 +13,15 @@ class Libros(models.Model):
         ('unique_isbn', 'UNIQUE(isbn)', 'El ISBN debe ser único. Ya existe un libro con este ISBN.')
     ]
 
-    name = fields.Char(string='Nombre',help='Nombre del libro',required=True,track_visibility='onchangue')
-    isbn = fields.Char(string="ISBN",required=True,track_visibility='onchangue')
-    author = fields.Char(string="Autor",track_visibility='onchangue')
-    description= fields.Text(string=u"Descripción",track_visibility='onchangue')
-    price=fields.Float(string="Precio",track_visibility='onchangue')
-    quantity = fields.Integer(string="Cantidad",track_visibility='onchangue')
-    active = fields.Boolean(string="Activo")
+    name = fields.Char(string='Nombre',help='Nombre del libro',required=True,track_visibility='onchange')
+    isbn = fields.Char(string="ISBN",required=True,track_visibility='onchange')
+    author = fields.Char(string="Autor",track_visibility='onchange')
+    description= fields.Text(string=u"Descripción",track_visibility='onchange')
+    price=fields.Float(string="Precio",track_visibility='onchange')
+    quantity = fields.Integer(string="Cantidad",track_visibility='onchange')
+    #active = fields.Boolean(string="Activo")
     message_ids = fields.One2many('mail.message', 'res_id', domain=[('model', '=', 'libros')], string='Mensajes', copy=False)
-    historial_prestamo_libro_ids = fields.One2many('prestamo.libros', inverse_name='libro_id', string='Historial de Préstamos')
+    historial_prestamo_libro_ids = fields.One2many('prestamo.libros', inverse_name='libro_id', string=u'Historial de Préstamos')
 
     
     @api.model
@@ -34,7 +34,7 @@ class Libros(models.Model):
             ("terror",u"Terror"),
         ]
         return genre
-    genre = fields.Selection(get_genre,string="Género",track_visibility='onchangue')
+    genre = fields.Selection(get_genre,string="Género",track_visibility='onchange')
 
     @api.model
     def get_state(self):
@@ -45,7 +45,7 @@ class Libros(models.Model):
             ("no_stock",u"Sin stock"),
         ]
         return state
-    state = fields.Selection(get_state,string="Estado",default="disponible",track_visibility='onchangue')
+    state = fields.Selection(get_state,string="Estado",default="disponible",track_visibility='onchange')
 
 
     
