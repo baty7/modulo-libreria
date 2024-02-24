@@ -14,8 +14,12 @@
         #'security/groups.xml',
         'security/ir.model.access.csv',
         'views/libros.xml',
+        'views/libreria_socios.xml',
         #'views/templates.xml',
         #'demo/demo.xml',
+    ],
+    'images':[
+        'static/description/logo-tienda.jpeg',
     ]
     
 }
