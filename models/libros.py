@@ -8,21 +8,21 @@ class Libros(models.Model):
     _name = 'libros'
     _description = 'Modelo de libros donde se almacena informacion sobre cada libro'
 
-    name = fields.Char(string='Nombre',help='NOmbre del libro',required=True)
+    name = fields.Char(string='Nombre',help='Nombre del libro',required=True)
     isbn = fields.Char(string="ISBN",required=True)
     author = fields.Char(string="Autor")
-    description= fields.Text(string="Descripción")
+    description= fields.Text(string=u"Descripción")
     price=fields.Float(string="Precio")
     quantity = fields.Integer(string="Cantidad")
     
     @api.model
     def get_genre(self):
         genre = [
-            ("fantasia","Fantasía"),
-            ("romance","Romance"),
-            ("ciencia_ficcion","Ciencia ficción")
-            ("misterio","Misterio"),
-            ("terror","Terror")
+            ("fantasia",u"Fantasía"),
+            ("romance",u"Romance"),
+            ("ciencia_ficcion",u"Ciencia ficción"),
+            ("misterio",u"Misterio"),
+            ("terror",u"Terror"),
         ]
         return genre
     genre = fields.Selection(get_genre,string="Género")
@@ -30,12 +30,13 @@ class Libros(models.Model):
     @api.model
     def get_state(self):
         state = [
-            ("prestado","Prestado"),
-            ("vendido","Vendido"),
-            ("no_stock","Sin stock")
+            ("disponible",u"Disponible"),
+            ("prestado",u"Prestado"),
+            ("vendido",u"Vendido"),
+            ("no_stock",u"Sin stock"),
         ]
         return state
-    state = fields.Selection(get_state,string="Estado")
+    state = fields.Selection(get_state,string="Estado",default="disponible")
 
 
     
