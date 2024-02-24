@@ -19,6 +19,7 @@ class Libros(models.Model):
     description= fields.Text(string=u"Descripción",track_visibility='onchangue')
     price=fields.Float(string="Precio",track_visibility='onchangue')
     quantity = fields.Integer(string="Cantidad",track_visibility='onchangue')
+    active = fields.Boolean(string="Activo")
     message_ids = fields.One2many('mail.message', 'res_id', domain=[('model', '=', 'libros')], string='Mensajes', copy=False)
     historial_prestamo_libro_ids = fields.One2many('prestamo.libros', inverse_name='libro_id', string='Historial de Préstamos')
 

@@ -18,6 +18,7 @@
                                 <field name="price"/>
                                 <field name="quantity"/>
                                 <field name="genre"/>
+                                <field name="active"/>
                                 <field name="description"/>
                             </group>
                             <group>
