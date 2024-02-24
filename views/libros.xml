@@ -27,7 +27,7 @@
                         </group>
                         <notebook>
                             <page name="historial_prestamo_libros" string="Historial de prestamos">
-                                <field name="historial_prestamo_libro_ids" create="0" editable="0" delete="0" >
+                                <field name="historial_prestamo_libro_ids" editable="bottom" nolabel="1">
                                     <tree>
                                     <field name="socio_id" options="{'no_create': True, 'no_edit': True}"/>
                                     <field name="fecha_prestamo"/>
