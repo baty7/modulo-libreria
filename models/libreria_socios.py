@@ -5,7 +5,6 @@ from odoo.exceptions import ValidationError
 import re
 
 class LibreriaSocios(models.Model):
-    _name = 'libreria.socios'
     _description = 'Modelo de socios de la libreria'
     _inherit = 'res.partner'
 
