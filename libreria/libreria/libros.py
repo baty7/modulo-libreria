@@ -19,7 +19,9 @@ class libros(models.Model):
     def get_genre(self):
         genre = [
             ("fantasia","Fantasía"),
-            ("romance","Romance")
+            ("romance","Romance"),
+            ("ciencia_ficcion","Ciencia ficción")
+            ("misterio","Misterio")
         ]
         return genre
     genre = fields.Selection(get_genre,string="Género")
@@ -27,9 +29,9 @@ class libros(models.Model):
     @api.model
     def get_state(self):
         state = [
-            ("fantasia","Fantasía"),
-            ("romance","Romance"),
-            ("ciencia_ficcion","Ciencia ficción")
+            ("prestado","Prestado"),
+            ("vendido","Vendido"),
+            ("no_stock","Sin stock")
         ]
         return state
     state = fields.Selection(get_state,string="Estado")
