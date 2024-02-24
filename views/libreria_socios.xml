@@ -6,9 +6,9 @@
             <field name="model">libreria.socios</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-		    <xpath expr="//field[@name='vat']" position="before">
+		    <!-- <xpath expr="//field[@name='vat']" position="before">
 		        <field name="numero_socio"/>
-		    </xpath>
+		    </xpath> -->
             </field>
         </record>
     </data>
