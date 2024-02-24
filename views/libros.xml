@@ -45,9 +45,9 @@
         </record>
 
         <record id="libros_action_window" model="ir.actions.act_window">
-            <field name="name">Acción de ventana para el modelo libros </field>
-            <field name="res_model">libros </field>
-            <field name="view_mode">tree,form </field>
+            <field name="name">Acción de ventana para el modelo libros</field>
+            <field name="res_model">libros</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem id ="libreria_menu_root" name="Libreria"/>
