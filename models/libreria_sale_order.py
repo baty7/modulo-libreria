@@ -16,3 +16,4 @@ class LibreriaSaleOrder(models.Model):
     telefono = fields.Char(string='Teléfono',related='partner_id.phone')
     email = fields.Char(string='Correo electrónico',related='partner_id.email')
     
+

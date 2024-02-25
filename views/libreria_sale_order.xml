@@ -13,13 +13,13 @@
                         <group>
                             <group>
                                 <field name="is_socio"/>
-                                <field name="partner_id" options="{'no_create': True, 'no_edit': True}" invisible="is_socio != True" required="is_socio != True"/>
                                 <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
-
+                                <field name="partner_id" domain="[('numero_socio', '=', numero_socio)]" options="{'no_create': True, 'no_edit': True}" invisible="is_socio != True" required="is_socio != True"/>
+                                
                             </group>
                             <group>
-                                <field name="telefono" widget="phone" />
-                                <field name="email" widget="email" />
+                                <field name="telefono" widget="phone" invisible="is_socio != True" required="is_socio != True" />
+                                <field name="email" widget="email" invisible="is_socio != True" required="is_socio != True" />
                             </group>
                         </group>
                         <notebook>
