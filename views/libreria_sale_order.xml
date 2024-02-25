@@ -13,7 +13,7 @@
                         <group>
                             <group>
                                 <field name="is_socio"/>
-                                <field name="partner_id" options="{'no_create': True, 'no_edit': True}" invisible="is_socio,!=,True" />
+                                <field name="partner_id" options="{'no_create': True, 'no_edit': True}" invisible="is_socio != True" />
                             </group>
                             <group>
 
