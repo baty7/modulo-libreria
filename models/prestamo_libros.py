@@ -7,7 +7,6 @@ import re
 class PrestamoLibros(models.Model):
     _name = 'prestamo.libros'
     _description = 'Modelo de prestamos de la libreria'
-    #_inherit = 'res.partner'
 
     socio_id = fields.Many2one('libreria.socios', string='Socio')
     libro_id = fields.Many2one('libros', string='Libro')

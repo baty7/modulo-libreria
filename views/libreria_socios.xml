@@ -3,12 +3,13 @@
     <data>
         <record id="libreria_socios_form" model="ir.ui.view">
             <field name="name">libreria_socios_form</field>
-            <field name="model">libreria.socios</field>
+            <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-		    <!-- <xpath expr="//field[@name='vat']" position="before">
+		    <xpath expr="//field[@name='vat']" position="before">
 		        <field name="numero_socio"/>
-		    </xpath> -->
+                <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
+		    </xpath> 
             </field>
         </record>
     </data>

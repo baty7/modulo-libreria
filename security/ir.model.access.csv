@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 libreria_libros_all,libreria_libros_all,model_libros,,1,1,1,1
-libreria_socios_all,libreria_socios_all,model_libreria_socios,,1,1,1,1
-libreria_prestamo_socios_all,libreria_prestamo_socios_all,model_prestamo_libros,,1,1,1,1
+libreria_prestamo_libros_all,libreria_prestamo_libros_all,model_prestamo_libros,,1,1,1,1
 
