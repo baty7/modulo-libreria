@@ -6,10 +6,14 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-		    <xpath expr="//form" position="replace">
+             <xpath expr="//field[@name='partner_id']" position="after">
+		        <field name="is_socio"/>
+		    </xpath> 
+            </field>
+        </record>
+
+		    <!-- <xpath expr="//form" position="replace">
 		         <form string="Formulario de ventas de libros">
-                 <header>
-                </header>
                     <sheet>
                         <group>
                             <group>
@@ -35,7 +39,8 @@
                     </sheet>
                 </form>
 		    </xpath> 
-            </field>
-        </record>
+           </field>
+        </record> -->
+
     </data>
 </odoo>

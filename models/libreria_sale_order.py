@@ -4,7 +4,7 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 import re
 
-class SaleOrder(models.Model):
+class LibreriaSaleOrder(models.Model):
     _description = 'Modelo de ventas de la libreria'
     _inherit = 'sale.order'
 
