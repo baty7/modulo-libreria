@@ -11,9 +11,10 @@ class LibreriaSaleOrder(models.Model):
     is_socio = fields.Boolean(string='Socio')
     line_ids = fields.One2many('libreria.historico.sale.order', inverse_name ='order_id', string='Historial libros')
     libro_id = fields.Many2one('libros', string='Libro')
-    partner_id = fields.Many2one('res.partner',string="Cliente")
-    numero_socio = fields.Char(string='Número de Socio',related='partner_id.numero_socio')
+    partner_id = fields.Many2one('res.partner',string="Cliente",required=False)
+    numero_socio = fields.Char(string='Número de Socio',required=True)
     telefono = fields.Char(string='Teléfono',related='partner_id.phone')
     email = fields.Char(string='Correo electrónico',related='partner_id.email')
+
     
 
