@@ -11,4 +11,5 @@ class LibreriaSaleOrder(models.Model):
     is_socio = fields.Boolean(string='Socio')
     line_ids = fields.One2many('libreria.historico.sale.order', inverse_name ='order_id', string='Historial libros')
     libro_id = fields.Many2one('libros', string='Libro')
+    partner_id = fields.Many2one('res.partner',string="Cliente")
     
