@@ -18,11 +18,9 @@ class LibreriaHistoricoSaleOrder(models.Model):
     total_importe = fields.Monetary(string='Total Importe', compute='_compute_total_importe', store=True)
 
     
-    @api.depends('libro_id')
+    @api.depends('price')
     def _compute_total_importe(self):
-        total = 0
-        for record in self:
-            total += record.price
-        return total  
+        self.total_importe = sum(self.mapped('price'))
+ 
             
         
