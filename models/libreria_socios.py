@@ -9,6 +9,6 @@ class LibreriaSocios(models.Model):
     _inherit = 'res.partner'
 
     numero_socio = fields.Char(string='Número de Socio')
-    #historial_prestamos = fields.One2many('prestamos', inverse_name ='socio_id', string='Historial de Préstamos')
+
 
 
