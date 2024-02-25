@@ -12,7 +12,7 @@
             </xpath>
 
             <xpath expr="//field[@name='partner_id']" position="attributes">
-                <field attributes="invisible">is_socio != True</attribute>
+                <field attribute="invisible">is_socio != True</attribute>
             </xpath>
 
 		     <xpath expr="//notebook" position="replace">
@@ -31,7 +31,7 @@
                     </page>
                 </notebook>
 		    </xpath> 
-            
+
            </field>
         </record> 
 
