@@ -9,7 +9,7 @@
 
     'category': 'tools',
     'version': '1.2',
-    'depends': ['base','mail'],
+    'depends': ['base','mail','sale'],
     'data': [
         #'security/groups.xml',
         'security/ir.model.access.csv',
