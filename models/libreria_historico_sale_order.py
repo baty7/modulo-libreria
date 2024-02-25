@@ -15,12 +15,8 @@ class LibreriaHistoricoSaleOrder(models.Model):
     author = fields.Char(string='Autor', related='libro_id.author', store=True)
     price=fields.Float(string="Precio",related='libro_id.price', store=True)
     genre = fields.Selection(string="Género",related='libro_id.genre', store=True)
-    total_importe = fields.Monetary(string='Total Importe', compute='_compute_total_importe', store=True)
+    #total_importe = fields.Monetary(string='Total Importe', compute='_compute_total_importe', store=True)
 
-    
-    @api.depends('price')
-    def _compute_total_importe(self):
-        self.total_importe = sum(self.mapped('price'))
  
             
         

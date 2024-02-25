@@ -32,7 +32,6 @@
                                     <field name="isbn"/>
                                     <field name="author"/>
                                     <field name="price"/>
-                                    <field name="total_importe"/>
                                     </tree>
                                 </field>    
                             </page>
