@@ -15,6 +15,24 @@ class LibreriaSaleOrder(models.Model):
     numero_socio = fields.Char(string='Número de Socio',required=True)
     telefono = fields.Char(string='Teléfono',related='partner_id.phone')
     email = fields.Char(string='Correo electrónico',related='partner_id.email')
+    total_precio = fields.Monetary(string='Total Precio', compute='_compute_total_precio', store=True)
 
+    @api.depends('line_ids.price')
+    def _compute_total_precio(self):
+        for record in self:
+            record.total_precio = sum(linea.price for linea in record.line_ids)
+
+    """ 
+    @api.model
+    def create(self, vals):
+        
+        return super(LibreriaSaleOrder, self).create(vals)
+
+    @api.multi
+    def write(self, vals):
     
-
+        return super(LibreriaSaleOrder, self).write(vals)
+    
+    @api.model
+    def procesar_vals(self,vals):
+        pass """
