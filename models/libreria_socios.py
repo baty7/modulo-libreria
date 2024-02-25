@@ -9,7 +9,6 @@ class LibreriaSocios(models.Model):
     _inherit = 'res.partner'
 
     numero_socio = fields.Char(string='Número de Socio')
-    libro_id = fields.Many2one('libros',string="Libro")
     #historial_prestamos = fields.One2many('prestamos', inverse_name ='socio_id', string='Historial de Préstamos')
 
 

@@ -18,10 +18,9 @@ class Libros(models.Model):
     author = fields.Char(string="Autor",track_visibility='onchange')
     description= fields.Text(string=u"Descripción",track_visibility='onchange')
     price=fields.Float(string="Precio",track_visibility='onchange')
-    quantity = fields.Integer(string="Cantidad",track_visibility='onchange')
-    #active = fields.Boolean(string="Activo")
+    quantity = fields.Integer(string="Stock",track_visibility='onchange')
     message_ids = fields.One2many('mail.message', 'res_id', domain=[('model', '=', 'libros')], string='Mensajes', copy=False)
-    historial_prestamo_libro_ids = fields.One2many('prestamo.libros', inverse_name='libro_id', string=u'Historial de Préstamos')
+    sale_order_id = fields.Many2one('sale.order',string="Venta")
 
     
     @api.model

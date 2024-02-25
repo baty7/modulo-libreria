@@ -18,14 +18,13 @@
                                 <field name="price"/>
                                 <field name="quantity"/>
                                 <field name="genre"/>
-                                <!-- <field name="active"/> -->
                                 <field name="description"/>
                             </group>
                             <group>
 
                             </group>
                         </group>
-                        <notebook>
+                   <!--      <notebook>
                             <page name="historial_prestamo_libros" string="Historial de prestamos">
                                 <field name="historial_prestamo_libro_ids" editable="bottom" nolabel="1">
                                     <tree>
@@ -36,7 +35,7 @@
                                     </tree>
                                 </field>    
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                     <footer>
                     <!-- Falta por asignarle que solo lo pueda ver el grupo de administradores -->

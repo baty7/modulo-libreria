@@ -8,7 +8,6 @@
             <field name="arch" type="xml">
 		    <xpath expr="//field[@name='vat']" position="before">
 		        <field name="numero_socio"/>
-                <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
 		    </xpath> 
             </field>
         </record>
