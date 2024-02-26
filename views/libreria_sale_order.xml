@@ -10,16 +10,10 @@
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="is_socio"/>
                 <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
-            </xpath>
-
-            <xpath expr="//field[@name='phone']" position="replace">
                 <field name="telefono" widget="phone" invisible="is_socio != True" required="is_socio != True"/>
-            </xpath>
-
-            <xpath expr="//field[@name='email']" position="replace">
                 <field name="email" widget="email" invisible="is_socio != True" required="is_socio != True"/>
             </xpath>
-
+            
             <xpath expr="//page[@name='order_lines']" position="before">
                 <page name="historial_libros" string="Historial de libros">
                     <group>
@@ -72,7 +66,7 @@
                 </form>
 		    </xpath> 
             -->
-            
+
            </field>
         </record>  
     </data>
