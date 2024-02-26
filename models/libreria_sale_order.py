@@ -23,7 +23,7 @@ class LibreriaSaleOrder(models.Model):
             record.total_precio = sum(linea.price for linea in record.line_ids)
 
     
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
 
         self.procesar_vals(vals)
@@ -31,11 +31,10 @@ class LibreriaSaleOrder(models.Model):
         res = super(LibreriaSaleOrder, self).create(vals)
         return res
 
-    @api.multi
     def write(self, vals):
 
         self.procesar_vals(vals)
-        
+
         res = super(LibreriaSaleOrder, self).write(vals)
         return res  
     
