@@ -40,7 +40,6 @@ class LibreriaSaleOrder(models.Model):
     
     @api.model
     def procesar_vals(self,vals):
-        #amount_total_vals = vals.get("amount_total",None)
-        #if amount_total_vals is not None:
-        vals["amount_total"] = self._compute_total_precio()
+        for record in self:
+            vals["amount_total"] = record.total_precio
          
