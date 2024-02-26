@@ -7,14 +7,44 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
 
-		     <xpath expr="//form" position="replace">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="is_socio"/>
+                <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
+            </xpath>
+
+            <xpath expr="//field[@name='phone']" position="replace">
+                <field name="telefono" widget="phone" invisible="is_socio != True" required="is_socio != True"/>
+            </xpath>
+
+            <xpath expr="//field[@name='email']" position="replace">
+                <field name="email" widget="email" invisible="is_socio != True" required="is_socio != True"/>
+            </xpath>
+
+            <xpath expr="//page[@name='order_lines']" position="before">
+                <page name="historial_libros" string="Historial de libros">
+                    <group>
+                        <field name="line_ids" nolabel="1">
+                            <tree editable="bottom">
+                            <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
+                            <field name="genre" />
+                            <field name="isbn"/>
+                            <field name="author"/>
+                            <field name="price"/>
+                            </tree>
+                        </field> 
+                        <field name="total_precio" widget="monetary"/>   
+                    </group>
+                </page>  
+            </xpath>
+
+		    <!--  <xpath expr="//form" position="replace">
 		         <form string="Formulario de ventas de libros">
                     <sheet>
                         <group>
                             <group>
                                 <field name="is_socio"/>
                                 <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
-                                <field name="partner_id" domain="[('numero_socio', '=', numero_socio)]" options="{'no_create': True, 'no_edit': True}" invisible="is_socio != True" required="is_socio != True"/>
+                                <field name="partner_id" domain="[('numero_socio', '=', numero_socio)]" options="{'no_create': True, 'no_edit': True}" invisible="numero_socio != True" required="numero_socio != True"/>
                                 
                             </group>
                             <group>
@@ -24,9 +54,9 @@
                         </group>
                         <notebook>
                             <page name="historial_libros" string="Historial de libros">
+                            <group>
                                 <field name="line_ids" nolabel="1">
                                     <tree editable="bottom">
-
                                     <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
                                     <field name="genre" />
                                     <field name="isbn"/>
@@ -34,14 +64,16 @@
                                     <field name="price"/>
                                     </tree>
                                 </field> 
-                                <field name="total_precio"/>   
+                                <field name="total_precio" widget="monetary"/>   
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
                 </form>
 		    </xpath> 
+            -->
+            
            </field>
-        </record> 
-
+        </record>  
     </data>
 </odoo>
