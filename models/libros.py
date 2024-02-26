@@ -11,7 +11,7 @@ class Libros(models.Model):
     _name = 'libros'
     _description = 'Modelo de libros donde se almacena informacion sobre cada libro'
     _inherit = ['mail.thread']
-    _rec_name = 'sale_order_id'
+    _rec_name = 'name'
 
     _sql_constraints = [
         ('unique_isbn', 'UNIQUE(isbn)', 'El ISBN debe ser único. Ya existe un libro con este ISBN.')
@@ -25,7 +25,7 @@ class Libros(models.Model):
     quantity = fields.Integer(string="Stock",tracking=True)
     message_ids = fields.One2many('mail.message', 'res_id', domain=[('model', '=', 'libros')], string='Mensajes', copy=False)
     sale_order_id = fields.Many2one('sale.order',string="Venta",tracking=True)
-    sale_order_line_ids = fields.One2many('sale.order',inverse_name="libro_id",string="Lineas de ventas",tracking=True)
+    sale_order_line_ids = fields.One2many('sale.order',inverse_name="libro_id",string="Lineas de ventas",tracking=True,compute="_compute_generar_venta_asociada_by_libro")
 
     
     @api.model
