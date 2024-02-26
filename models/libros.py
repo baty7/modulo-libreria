@@ -54,13 +54,13 @@ class Libros(models.Model):
     genre = fields.Selection(get_genre,string="Género",tracking=True)
 
     @api.model
-    def get_estado(self):
-        estado = [
+    def get_state(self):
+        state = [
             ("disponible",u"Disponible"),
             ("no_stock",u"Sin stock"),
         ]
-        return estado
-    estado = fields.Selection(get_estado,string="Estado",default="disponible")
+        return state
+    state = fields.Selection(get_state,string="Estado",default="disponible",tracking=True)
 
     
     def _compute_generar_venta_asociada_by_libro(self):
@@ -76,9 +76,9 @@ class Libros(models.Model):
     def _onchange_establecer_cantidad(self):
         for record in self:
             if record.quantity == 0:
-                record.estado = 'no_stock'
+                record.state = 'no_stock'
             elif record.quantity > 0:
-                record.estado = 'disponible'
+                record.state = 'disponible'
             else:
                 raise ValidationError(u"No puede haber un stock de libros negativo")
 
