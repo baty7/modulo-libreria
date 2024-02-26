@@ -31,6 +31,7 @@ class Libros(models.Model):
     @api.model
     def get_puntuacion(self):
         puntuacion = [
+            ("mui_malo",u" Muy Malo"),
             ("malo",u"Malo"),
             ("normal",u"Normal"),
             ("mui_bueno",u"Muy bueno"),
