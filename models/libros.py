@@ -54,13 +54,13 @@ class Libros(models.Model):
     genre = fields.Selection(get_genre,string="Género",tracking=True)
 
     @api.model
-    def get_state(self):
-        state = [
+    def get_estado(self):
+        estado = [
             ("disponible",u"Disponible"),
             ("no_stock",u"Sin stock"),
         ]
-        return state
-    estado = fields.Selection(get_state,string="Estado",default="disponible",tracking=True)
+        return estado
+    estado = fields.Selection(get_estado,string="Estado",default="disponible")
 
     
     def _compute_generar_venta_asociada_by_libro(self):
