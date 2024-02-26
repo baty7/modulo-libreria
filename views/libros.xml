@@ -31,7 +31,7 @@
                                     <field name="name" />
                                     <field name="create_date"/>
                                     <field name="partner_id" options='{"no_open": True,"no_create": 1, "no_create_edit": 1}'/>
-                                    <field name="state" decoration-success="state == 'sale'" decoration-info="state == 'draft'" decoration-primary="state == 'sent'" widget="badge" optional="show" on_change="1" field_id="state_0"/>
+                                    <field name="state" decoration-success="state == 'sale'" decoration-info="state == 'draft'" decoration-primary="state == 'sent'" widget="badge" optional="show" on_change="1"/>
                                     </tree>
                                 </field>    
                             </page>
@@ -58,7 +58,7 @@
                     <field name="author"/>
                     <field name="price"/>
                     <field name="quantity"/>
-                    <field name="state" decoration-success="state == 'disponible'" decoration-error="state == 'no_stock'" widget="badge" optional="show" on_change="1" />
+                    <field name="estado" decoration-success="state == 'disponible'" decoration-error="state == 'no_stock'" widget="badge" optional="show" on_change="1" />
                 </tree>
             </field>
         </record>

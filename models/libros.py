@@ -60,7 +60,7 @@ class Libros(models.Model):
             ("no_stock",u"Sin stock"),
         ]
         return state
-    state = fields.Selection(get_state,string="Estado",default="disponible",tracking=True)
+    estado = fields.Selection(get_state,string="Estado",default="disponible",tracking=True)
 
     
     def _compute_generar_venta_asociada_by_libro(self):
@@ -76,9 +76,9 @@ class Libros(models.Model):
     def _onchange_establecer_cantidad(self):
         for record in self:
             if record.quantity == 0:
-                record.state = 'no_stock'
+                record.estado = 'no_stock'
             elif record.quantity > 0:
-                record.state = 'disponible'
+                record.estado = 'disponible'
             else:
                 raise ValidationError(u"No puede haber un stock de libros negativo")
 
