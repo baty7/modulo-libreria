@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Formulario de Libros">
                  <header>
-                    <field name="state" widget="statusbar"/>
+                    <field name="estado" widget="statusbar"/>
                 </header>
                     <sheet>
                         <group>
