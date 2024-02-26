@@ -14,20 +14,17 @@
                 <field name="email" widget="email" invisible="is_socio != True" required="is_socio != True"/>
             </xpath>
             
-            <xpath expr="//page[@name='order_lines']" position="before">
+            <xpath expr="//page[@name='order_lines']" position="replace">
                 <page name="historial_libros" string="Historial de libros">
-                    <group>
-                        <field name="line_ids" nolabel="1">
-                            <tree editable="bottom">
-                            <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
-                            <field name="genre" />
-                            <field name="isbn"/>
-                            <field name="author"/>
-                            <field name="price"/>
-                            </tree>
-                        </field> 
-                        <field name="total_precio" widget="monetary"/>   
-                    </group>
+                    <field name="line_ids" nolabel="1">
+                        <tree editable="bottom">
+                        <field name="libro_id" options="{'no_create': True, 'no_edit': True}"/>
+                        <field name="genre" />
+                        <field name="isbn"/>
+                        <field name="author"/>
+                        <field name="price"/>
+                        </tree>
+                    </field> 
                 </page>  
             </xpath>
 

@@ -22,17 +22,26 @@ class LibreriaSaleOrder(models.Model):
         for record in self:
             record.total_precio = sum(linea.price for linea in record.line_ids)
 
-    """ 
+    
     @api.model
     def create(self, vals):
-        
-        return super(LibreriaSaleOrder, self).create(vals)
+
+        self.procesar_vals(vals)
+
+        res = super(LibreriaSaleOrder, self).create(vals)
+        return res
 
     @api.multi
     def write(self, vals):
-    
-        return super(LibreriaSaleOrder, self).write(vals)
+
+        self.procesar_vals(vals)
+        
+        res = super(LibreriaSaleOrder, self).write(vals)
+        return res  
     
     @api.model
     def procesar_vals(self,vals):
-        pass """
+        #amount_total_vals = vals.get("amount_total",None)
+        #if amount_total_vals is not None:
+        vals["amount_total"] = self._compute_total_precio()
+         
