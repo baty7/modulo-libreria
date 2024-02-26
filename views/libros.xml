@@ -24,18 +24,18 @@
 
                             </group>
                         </group>
-                   <!--      <notebook>
-                            <page name="historial_prestamo_libros" string="Historial de prestamos">
-                                <field name="historial_prestamo_libro_ids" editable="bottom" nolabel="1">
-                                    <tree>
-                                    <field name="socio_id" options="{'no_create': True, 'no_edit': True}"/>
-                                    <field name="fecha_prestamo"/>
-                                    <field name="fecha_devolucion"/>
-                                    <field name="estado"/>
+                        <notebook>
+                            <page name="historial_ventas_libro" string="Historial de ventas del libro">
+                                <field name="sale_order_line_ids" editable="bottom">
+                                    <tree create="0" edit="0" delete="0">
+                                    <field name="name" />
+                                    <field name="create_date"/>
+                                    <field name="partner_id" options='{"no_open": True,"no_create": 1, "no_create_edit": 1}'/>
+                                    <field name="state"/>
                                     </tree>
                                 </field>    
                             </page>
-                        </notebook> -->
+                        </notebook>
                     </sheet>
                     <footer>
                     <!-- Falta por asignarle que solo lo pueda ver el grupo de administradores -->
