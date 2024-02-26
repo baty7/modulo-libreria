@@ -14,14 +14,14 @@
                             <group>
                                 <field name="name"/>
                                 <field name="isbn"/>
-                                <field name="author"/>
-                                <field name="price"/>
-                                <field name="quantity"/>
+                                <field name="author"/>   
                                 <field name="genre"/>
                                 <field name="description"/>
                             </group>
                             <group>
-
+                                <field name="price"/>
+                                <field name="quantity"/>
+                                <field name="puntuacion_libro" widget="priority"/>
                             </group>
                         </group>
                         <notebook>
