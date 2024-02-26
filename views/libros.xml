@@ -58,7 +58,7 @@
                     <field name="author"/>
                     <field name="price"/>
                     <field name="quantity"/>
-                    <field name="estado" decoration-success="state == 'disponible'" decoration-error="state == 'no_stock'" widget="badge" optional="show" on_change="1" />
+                    <field name="estado" decoration-success="estado == 'disponible'" decoration-error="estado == 'no_stock'" widget="badge" optional="show" on_change="1" />
                 </tree>
             </field>
         </record>
