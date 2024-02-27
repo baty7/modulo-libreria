@@ -101,16 +101,6 @@
             <field name="genre">misterio</field>
         </record>
 
-        <!-- Libro 10 -->
-        <record id="libro_10" model="libros">
-            <field name="name">Cien años de soledad</field>
-            <field name="isbn">9788437618345</field>
-            <field name="author">Gabriel García Márquez</field>
-            <field name="price">15.50</field>
-            <field name="description">Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.</field>
-            <field name="quantity">75</field>
-            <field name="genre">realismo_mágico</field>
-        </record>
 
     </data>
     </odoo>
