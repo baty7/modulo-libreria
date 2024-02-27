@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="libreria_users" model="res.groups">
+    <record id="libreria_users_group" model="res.groups">
         <field name="name">libreria_users</field>       
-        <field name="users" eval="[(4, ref('base.group_user'))]" />
     </record>
 
-    <record id="libreria_admin" model="res.groups">
+    <record id="libreria_admin_group" model="res.groups">
         <field name="name">libreria_admin</field>
-        <field name="users" eval="[(4, ref('base.user_admin'))]" />
     </record>
 
 
