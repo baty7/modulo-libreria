@@ -43,7 +43,7 @@ class LibreriaSaleOrder(models.Model):
         for record in self:
             vals["amount_total"] = record.total_precio
 
-    def button_confirmar(self):
+        """   def button_confirmar(self):
         for record in self:
             vals = {
                 'partner_id': record.partner_id.id,
@@ -65,8 +65,5 @@ class LibreriaSaleOrder(models.Model):
                                 
                 vals['line_ids'].append((0,0,venta_line_vals))
                 
-            venta = self.env['sale.order'].create(vals)
-
-        #return venta
-            
+            venta = self.env['sale.order'].create(vals) """
          

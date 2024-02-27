@@ -27,9 +27,6 @@
                     </field> 
                 </page>  
             </xpath>
-            <xpath expr="//footer" position="inside">
-                <button name="button_confirmar" string="Confirmar" type="object"/>
-            </xpath>
            </field>
         </record>  
 

@@ -109,7 +109,7 @@ class Libros(models.Model):
                 "views": [
                         [self.env.ref("modulo-libreria.libreria_sale_order_from").id, "form"]
                 ],
-                'target': 'new',
+                'target': 'current',
                 'context': {
                     'default_line_ids': libro_ids
                 } 
