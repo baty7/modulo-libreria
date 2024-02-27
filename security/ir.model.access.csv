@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-libreria_libros_all,libreria_libros_all,model_libros,modulo-liberia.libreria_users,1,0,0,0
-libreria_libros_admin,libreria_libros_admin,model_libros,modulo-liberia.libreria_admin,1,1,1,1
-libreria_historico_sale_order_all,libreria_historico_sale_order_all,model_libreria_historico_sale_order,modulo-liberia.libreria_users,1,0,0,0
-libreria_historico_sale_order_admin,libreria_historico_sale_order_admin,model_libreria_historico_sale_order,modulo-liberia.libreria_admin,1,1,1,1
+libreria_libros_all,libreria_libros_all,model_libros,base.libreria_users,1,0,0,0
+libreria_libros_admin,libreria_libros_admin,model_libros,base.libreria_admin,1,1,1,1
+libreria_historico_sale_order_all,libreria_historico_sale_order_all,model_libreria_historico_sale_order,base.libreria_users,1,0,0,0
+libreria_historico_sale_order_admin,libreria_historico_sale_order_admin,model_libreria_historico_sale_order,base.libreria_admin,1,1,1,1
 
 

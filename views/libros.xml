@@ -40,7 +40,7 @@
                     </sheet>
                     <footer>
                     <!-- Falta por asignarle que solo lo pueda ver el grupo de administradores -->
-                        <div class="oe_chatter" groups="libreria_admin">
+                        <div class="oe_chatter">
                             <field name="message_ids" widget="mail_thread"/>
                         </div>
                     </footer>
