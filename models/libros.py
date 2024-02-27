@@ -106,7 +106,7 @@ class Libros(models.Model):
                 'view_type': 'form',
                 'view_mode': 'form',
                 'type': 'ir.actions.act_window',
-                'res_model': 'libreria.sale.order',
+                'res_model': 'sale.order',
                 "views": [
                         [self.env.ref("modulo-libreria.libreria_sale_order_modal_form").id, "form"]
                 ],
