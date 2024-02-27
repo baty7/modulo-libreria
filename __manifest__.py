@@ -11,7 +11,7 @@
     'version': '1.2',
     'depends': ['base','mail','sale'],
     'data': [
-        #'security/groups.xml',
+        'security/groups.xml',
         'security/ir.model.access.csv',
         'views/libros.xml',
         'views/libreria_sale_order.xml',
