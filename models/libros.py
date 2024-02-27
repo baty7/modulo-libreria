@@ -20,7 +20,6 @@ class Libros(models.Model):
     name = fields.Char(string='Nombre',help='Nombre del libro',required=True,tracking=True)
     isbn = fields.Char(string="ISBN",required=True,tracking=True)
     author = fields.Char(string="Autor",tracking=True)
-    partner_id = fields.Many2one('res.partner',string="Cliente")
     description= fields.Text(string=u"Descripción",tracking=True)
     price=fields.Float(string="Precio",tracking=True)
     quantity = fields.Integer(string="Stock",tracking=True,required=True)
@@ -86,6 +85,7 @@ class Libros(models.Model):
 
     def button_generar_venta_popup(self):
         ventas_ids = []
+        res = {}
         for record in self:
             if record.quantity == 0:
                 raise ValidationError(u"No se puede generar una venta de un libro sin STOCK")

@@ -13,7 +13,6 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="partner_id" invisible="1"/>
                                 <field name="name"/>
                                 <field name="isbn"/>
                                 <field name="author"/>   
