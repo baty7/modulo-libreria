@@ -27,12 +27,15 @@
                     </field> 
                 </page>  
             </xpath>
+            <xpath expr="//footer" position="inside">
+                <button name="button_confirmar" string="Confirmar" type="object"/>
+            </xpath>
            </field>
         </record>  
 
 
-         <!-- vista del popup generar venta -->
-        <record model="ir.ui.view" id="libreria_sale_order_modal_form">
+        
+    <!--     <record model="ir.ui.view" id="libreria_sale_order_modal_form">
             <field name="name">libreria_sale_order_modal_form</field>
             <field name="model">sale.order</field>
             <field name="type">form</field>
@@ -64,7 +67,7 @@
                 </footer>
             </form>
             </field>
-        </record> 
+        </record>  -->
 
     </data>
 </odoo>

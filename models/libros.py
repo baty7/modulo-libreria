@@ -84,8 +84,7 @@ class Libros(models.Model):
             
 
     def button_generar_venta_popup(self):
-        ventas_ids = []
-        res = {}
+        libro_ids = []
         for record in self:
             if record.quantity == 0:
                 raise ValidationError(u"No se puede generar una venta de un libro sin STOCK")
@@ -98,9 +97,9 @@ class Libros(models.Model):
                 "price":record.price
             }
 
-            ventas_ids.append((0,0,libros_vals_line))
+            libro_ids.append((0,0,libros_vals_line))
 
-        if len (ventas_ids) > 0:
+        if len (libro_ids) > 0:
             res = {
                 'name': u'Generar venta',
                 'view_type': 'form',
@@ -108,11 +107,11 @@ class Libros(models.Model):
                 'type': 'ir.actions.act_window',
                 'res_model': 'sale.order',
                 "views": [
-                        [self.env.ref("modulo-libreria.libreria_sale_order_modal_form").id, "form"]
+                        [self.env.ref("modulo-libreria.libreria_sale_order_from").id, "form"]
                 ],
                 'target': 'new',
                 'context': {
-                    'default_line_ids': ventas_ids
+                    'default_line_ids': libro_ids
                 } 
             }
             return res
