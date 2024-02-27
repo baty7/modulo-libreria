@@ -42,7 +42,31 @@ class LibreriaSaleOrder(models.Model):
     def procesar_vals(self,vals):
         for record in self:
             vals["amount_total"] = record.total_precio
-            
+
     def button_confirmar(self):
-        pass
+        for record in self:
+            vals = {
+                'partner_id': record.partner_id.id,
+                'is_socio':record.is_socio,
+                'numero_socio':record.numero_socio,
+                'phone':record.phone,
+                'email':record.email,
+                'line_ids':[],        
+            }
+            
+            for line in record.line_ids:
+                venta_line_vals =  {
+                    "libro_id": line.libro_id.id,
+                    "genre": line.genre,
+                    "isbn": line.isbn,
+                    "author": line.author,
+                    "price": line.price      
+                    }            
+                                
+                vals['line_ids'].append((0,0,venta_line_vals))
+                
+            venta = self.env['sale.order'].create(vals)
+
+        #return venta
+            
          
