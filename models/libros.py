@@ -20,7 +20,7 @@ class Libros(models.Model):
     name = fields.Char(string='Nombre',help='Nombre del libro',required=True,tracking=True)
     isbn = fields.Char(string="ISBN",required=True,tracking=True)
     author = fields.Char(string="Autor",tracking=True)
-    
+    partner_id = fields.Many2one('res.partner',string="Cliente", required=True, tracking=True, domain="[('company_id', 'in', (False, company_id))]")
     description= fields.Text(string=u"Descripción",tracking=True)
     price=fields.Float(string="Precio",tracking=True)
     quantity = fields.Integer(string="Stock",tracking=True,required=True)

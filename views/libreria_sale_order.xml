@@ -41,6 +41,7 @@
                 <sheet>
                 <group>
                 <group>
+                    <field name="partner_id"/>
                     <field name="is_socio" widget="toggle"/>
                     <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
                     <field name="telefono" widget="phone" invisible="is_socio != True" required="is_socio != True"/>
