@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Libro 1 -->
+        <record id="libro_1" model="libros">
+            <field name="name">El señor de los anillos</field>
+            <field name="isbn">9788445074511</field>
+            <field name="author">J.R.R. Tolkien</field>
+            <field name="price">20.00</field>
+            <field name="description">Un clásico de la literatura fantástica que narra la historia de la Tierra Media y el viaje de un joven hobbit llamado Frodo Bolsón.</field>
+            <field name="quantity">100</field>
+            <field name="genre">fantasia</field>
+        </record>
+
+        <!-- Libro 2 -->
+        <record id="libro_2" model="libros">
+            <field name="name">Cien años de soledad</field>
+            <field name="isbn">9788437618332</field>
+            <field name="author">Gabriel García Márquez</field>
+            <field name="price">15.50</field>
+            <field name="description">Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.</field>
+            <field name="quantity">75</field>
+            <field name="genre">romance</field>
+        </record>
+
+        <!-- Libro 3 -->
+        <record id="libro_3" model="libros">
+            <field name="name">Don Quijote de la Mancha</field>
+            <field name="isbn">9788420412146</field>
+            <field name="author">Miguel de Cervantes</field>
+            <field name="price">18.75</field>
+            <field name="description">La historia de un hidalgo que enloquece tras leer demasiadas novelas de caballería y decide convertirse en un caballero andante.</field>
+            <field name="quantity">120</field>
+            <field name="genre">misterio</field>
+        </record>
+
+        <!-- Libro 4 -->
+        <record id="libro_4" model="libros">
+            <field name="name">Harry Potter y la piedra filosofal</field>
+            <field name="isbn">9788478884456</field>
+            <field name="author">J.K. Rowling</field>
+            <field name="price">22.99</field>
+            <field name="description">El primer libro de la famosa serie de Harry Potter, que sigue las aventuras del joven mago Harry y sus amigos en Hogwarts.</field>
+            <field name="quantity">90</field>
+            <field name="genre">ciencia_ficcion</field>
+        </record>
+
+        <!-- Libro 5 -->
+        <record id="libro_5" model="libros">
+            <field name="name">Orgullo y prejuicio</field>
+            <field name="isbn">9788491052429</field>
+            <field name="author">Jane Austen</field>
+            <field name="price">17.25</field>
+            <field name="description">Una novela clásica que explora temas de amor, matrimonio y sociedad en la Inglaterra del siglo XIX.</field>
+            <field name="quantity">80</field>
+            <field name="genre">romance</field>
+        </record>
+
+        <!-- Libro 6 -->
+        <record id="libro_6" model="libros">
+            <field name="name">1984</field>
+            <field name="isbn">9788420676778</field>
+            <field name="author">George Orwell</field>
+            <field name="price">16.50</field>
+            <field name="description">Una novela distópica que presenta un mundo totalitario donde el gobierno controla todos los aspectos de la vida de las personas.</field>
+            <field name="quantity">110</field>
+            <field name="genre">terror</field>
+        </record>
+
+        <!-- Libro 7 -->
+        <record id="libro_7" model="libros">
+            <field name="name">Moby Dick</field>
+            <field name="isbn">9788491052429</field>
+            <field name="author">Herman Melville</field>
+            <field name="price">19.75</field>
+            <field name="description">Una novela épica que narra la obsesión del capitán Ahab por capturar a la ballena blanca, Moby Dick.</field>
+            <field name="quantity">85</field>
+            <field name="genre">aventura</field>
+        </record>
+
+        <!-- Libro 8 -->
+        <record id="libro_8" model="libros">
+            <field name="name">Los miserables</field>
+            <field name="isbn">9788491052429</field>
+            <field name="author">Victor Hugo</field>
+            <field name="price">24.50</field>
+            <field name="description">Una historia que sigue las vidas de varios personajes en la Francia del siglo XIX, destacando la redención y el perdón.</field>
+            <field name="quantity">95</field>
+            <field name="genre">drama</field>
+        </record>
+
+        <!-- Libro 9 -->
+        <record id="libro_9" model="libros">
+            <field name="name">Crimen y castigo</field>
+            <field name="isbn">9788420660814</field>
+            <field name="author">Fyodor Dostoyevsky</field>
+            <field name="price">21.00</field>
+            <field name="description">Una novela psicológica que explora temas de culpa y redención a través de la historia de un estudiante que comete un crimen.</field>
+            <field name="quantity">100</field>
+            <field name="genre">misterio</field>
+        </record>
+
+        <!-- Libro 10 -->
+        <record id="libro_10" model="libros">
+            <field name="name">Cien años de soledad</field>
+            <field name="isbn">9788437618332</field>
+            <field name="author">Gabriel García Márquez</field>
+            <field name="price">15.50</field>
+            <field name="description">Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.</field>
+            <field name="quantity">75</field>
+            <field name="genre">realismo_mágico</field>
+        </record>
+
+    </data>
+    </odoo>
+

@@ -21,7 +21,6 @@ class LibreriaSaleOrder(models.Model):
     def _compute_total_precio(self):
         for record in self:
             record.total_precio = sum(linea.price for linea in record.line_ids)
-
     
     @api.model_create_multi
     def create(self, vals):
@@ -42,6 +41,7 @@ class LibreriaSaleOrder(models.Model):
     def procesar_vals(self,vals):
         for record in self:
             vals["amount_total"] = record.total_precio
+            
 
         """   def button_confirmar(self):
         for record in self:

@@ -70,7 +70,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id ="libreria_menu_root" name="Libreria"/>
+        <menuitem id ="libreria_menu_root" name="Libreria" web_icon="modulo-liberia,static/description/logo-tienda.jpeg"/>
 
         <menuitem id="libros_menu" name="Libros" parent="libreria_menu_root"/>
 

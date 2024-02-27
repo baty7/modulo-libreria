@@ -16,11 +16,14 @@
         'views/libros.xml',
         'views/libreria_sale_order.xml',
         'views/libreria_socios.xml',
-        #'views/templates.xml',
-        #'demo/demo.xml',
+        'demo/demo.xml',
     ],
     'images':[
         'static/description/logo-tienda.jpeg',
-    ]
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+        'demo/demo.xml',
+    ],
     
 }
