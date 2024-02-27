@@ -71,7 +71,7 @@
         <!-- Libro 7 -->
         <record id="libro_7" model="libros">
             <field name="name">Moby Dick</field>
-            <field name="isbn">9788491052429</field>
+            <field name="isbn">9788491052411</field>
             <field name="author">Herman Melville</field>
             <field name="price">19.75</field>
             <field name="description">Una novela épica que narra la obsesión del capitán Ahab por capturar a la ballena blanca, Moby Dick.</field>
@@ -82,7 +82,7 @@
         <!-- Libro 8 -->
         <record id="libro_8" model="libros">
             <field name="name">Los miserables</field>
-            <field name="isbn">9788491052429</field>
+            <field name="isbn">9788491052400</field>
             <field name="author">Victor Hugo</field>
             <field name="price">24.50</field>
             <field name="description">Una historia que sigue las vidas de varios personajes en la Francia del siglo XIX, destacando la redención y el perdón.</field>
@@ -104,7 +104,7 @@
         <!-- Libro 10 -->
         <record id="libro_10" model="libros">
             <field name="name">Cien años de soledad</field>
-            <field name="isbn">9788437618332</field>
+            <field name="isbn">9788437618345</field>
             <field name="author">Gabriel García Márquez</field>
             <field name="price">15.50</field>
             <field name="description">Una novela que narra la historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.</field>
