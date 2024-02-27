@@ -42,4 +42,7 @@ class LibreriaSaleOrder(models.Model):
     def procesar_vals(self,vals):
         for record in self:
             vals["amount_total"] = record.total_precio
+            
+    def button_confirmar(self):
+        pass
          

@@ -82,6 +82,37 @@ class Libros(models.Model):
                 record.state = 'disponible'
             else:
                 raise ValidationError(u"No puede haber un stock de libros negativo")
+            
+
+    def button_generar_venta_popup(self):
+        ventas_ids = []
+        for record in self:
+            libros_vals_line = {
+                "libro_id":record.id,
+                "genre":record.genre,
+                "isbn":record.isbn,
+                "author":record.author,
+                "price":record.price
+            }
+
+            ventas_ids.append((0,0,libros_vals_line))
+
+        if len (ventas_ids) > 0:
+            res = {
+                'name': u'Generar venta',
+                'view_type': 'form',
+                'view_mode': 'form',
+                'type': 'ir.actions.act_window',
+                'res_model': 'libreria.sale.order',
+                "views": [
+                        [self.env.ref("models.libreria_sale_order_modal_form").id, "form"]
+                ],
+                'target': 'new',
+                'context': {
+                    'default_line_ids': ventas_ids
+                } 
+            }
+            return res
 
 
 

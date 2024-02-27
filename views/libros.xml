@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Formulario de Libros">
                  <header>
+                    <button name="button_generar_venta_popup" string="Generar Venta" type="object"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                     <sheet>
