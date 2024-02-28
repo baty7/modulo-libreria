@@ -2,11 +2,11 @@
 <odoo>
 
     <record id="libreria_users_group" model="res.groups">
-        <field name="name">libreria_users</field>       
+        <field name="name">Libreria users</field>       
     </record>
 
     <record id="libreria_admin_group" model="res.groups">
-        <field name="name">libreria_admin</field>
+        <field name="name">Libreria administrar</field>
     </record>
 
 

@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 libreria_libros_all,libreria_libros_all,model_libros,,1,0,0,0
-libreria_libros_admin,libreria_libros_admin,model_libros,,1,1,1,1
+libreria_libros_admin,libreria_libros_admin,model_libros,modulo-libreria.libreria_admin_group,1,1,1,1
 libreria_historico_sale_order_all,libreria_historico_sale_order_all,model_libreria_historico_sale_order,,1,0,0,0
 libreria_historico_sale_order_admin,libreria_historico_sale_order_admin,model_libreria_historico_sale_order,,1,1,1,1
 
