@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name':'libreria',
+    'name':'modulo-libreria',
     'summary':"Gestión de una tienda de de libros",
     'description':"""
     Módulo para la gestión de una tienda de libros
