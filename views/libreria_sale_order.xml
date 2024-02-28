@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
 
             <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="is_socio" widget="toggle" invisible="partner_id != True"/>
+                <field name="is_socio" widget="toggle"/>
                 <field name="numero_socio" invisible="is_socio != True" required="is_socio != True" />
                 <field name="telefono" widget="phone" invisible="is_socio != True" required="is_socio != True"/>
                 <field name="email" widget="email" invisible="is_socio != True" required="is_socio != True"/>
